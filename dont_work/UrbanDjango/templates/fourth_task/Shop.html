@@ -1,0 +1,17 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    {%include 'templates/fourth_task/menu.html'%}
+    <h1>{{ text }}</h1>
+    {% for i in list_game.games %}
+    <p>{{ i }} <button>Купить</button></p>
+    {% endfor %}
+<button onclick="location.href='/'">Вернуться обратно</button>
+</body>
+</html>
