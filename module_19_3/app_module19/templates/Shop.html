@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {%include 'menu.html'%}
+    {% for game in list_game %}
+    <p>{{ game.title }}|{{game.description}}.Стоимость:{{ game.price }} <button>Купить</button></p>
+    {% endfor %}
+<button onclick="location.href='/'">Вернуться обратно</button>
+</body>
+</html>
